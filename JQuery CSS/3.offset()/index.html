@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+        <p>this is a paragraph</p>
+        <button id="button1">return the offset coordinates of the p element</button>
+        <button id="button2">change the coordinates</button>
+    
+
+
+        
+
+    <script src="code.jquery.com_jquery-3.7.0.slim.min.js"></script>
+    <script>
+        //offset() parametresiz kullanımda return eder
+        $(document).ready(function(){
+            $("#button1").click(function(){
+                var x=$("p").offset(); //sağa sola yukarı aşağı ne kadar uzak bu bilgilerin hepsi x e aktarıldı!!
+                alert("yukarıya uzaklık(top):" +x.top+ " /sola uzaklık(left):"+x.left);
+            });
+            
+            $("#button2").click(function(){
+                $("p").offset({top:400,left:200}); //offset ile yeni koordinat set ettik.
+            });
+
+            //parametreli şekilde kullanıldığında yeni koordinat değerleri set edebilirz veya güncelleyebilirz.
+
+        });
+
+        
+    </script>
+    
+    <script src="bus.js"></script>
+</body>
+</html>
